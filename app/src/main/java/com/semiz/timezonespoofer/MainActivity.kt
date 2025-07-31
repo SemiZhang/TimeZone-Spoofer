@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val pref = prefs("tiger_duolingo")
         val availableTimezoneList = TimeZone.getAvailableIDs().toMutableList()
         val psStatusText = findViewById<TextView>(R.id.ps_status)
+        psStatusText.text = getText(R.string.rescue_status).toString() + pref.getString("now_timezone", getText(R.string.not_set).toString())
 
         // Default timezone
         val defaultTzEdit = findViewById<EditText>(R.id.default_tz_edit)
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 if (pref.getBoolean("is_save", false) == false) {
                     renewTimezone(defaultTzEdit.text.toString(), pref, psStatusText)
                 }
-                Toast.makeText(this, getText(R.string.setting_success), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
             }
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 if (pref.getBoolean("is_save", false) == true) {
                     renewTimezone(rescueTzEdit.text.toString(), pref, psStatusText)
                 }
-                Toast.makeText(this, getText(R.string.setting_success), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
             }

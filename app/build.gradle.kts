@@ -12,8 +12,8 @@ android {
         applicationId = "com.semiz.timezonespoofer"
         minSdk = 29
         targetSdk = 35
-        versionCode = 20250730
-        versionName = "1.01"
+        versionCode = 20250731
+        versionName = "1.02"
     }
 
     /*

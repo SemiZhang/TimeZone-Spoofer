@@ -13,5 +13,7 @@
     <string name="rescue_status">当前使用时区：</string>
     <string name="rescue_dialog">当前正处于连胜抢救模式！时区：%s</string>
     <string name="rescue_desc">1. 置空「默认时区」时，会恢复到系统时区。\n2. 当抢救模式启动时，仅会使用抢救时区。</string>
+    <string name="timezone_saved">时区已保存</string>
+    <string name="not_set">未设置</string>
 
 </resources>

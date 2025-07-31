@@ -13,4 +13,6 @@
     <string name="rescue_status">Current applied timezone: </string>
     <string name="rescue_dialog">Rescue mode now! Timezone: %s</string>
     <string name="rescue_desc">1. When the "Default Timezone" is cleared, it will revert to the system time zone.\n2. When rescue mode is activated, only the Rescue Timezone will be used.</string>
+    <string name="timezone_saved">TimeZone saved</string>
+    <string name="not_set">Not set</string>
 </resources>

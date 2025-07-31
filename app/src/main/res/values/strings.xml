@@ -4,13 +4,13 @@
     <string name="xposed_desc">Change time zone of selected apps</string>
 
     <string name="ok">OK</string>
-    <string name="setting_success">Done, please manually restart Duolingo</string>
+    <string name="setting_success">Done, please manually restart target app</string>
     <string name="default_tz">Default Timezone</string>
     <string name="rescue_tz">Rescue Timezone</string>
     <string name="rescue_streak">RESCUE MY STREAKS!</string>
     <string name="rescue_clear">RESTORE</string>
     <string name="rescue_error">Your device does not seem to support the timezone ID you entered. Example: America/Los_Angeles</string>
-    <string name="rescue_status">Current Duolingo timezone: </string>
-    <string name="rescue_dialog">Duolingo is in streak rescue mode now! Timezone: %s</string>
-    <string name="rescue_desc">1. When the "Default Timezone" is cleared, it will revert to the system time zone.\n2. When rescue mode is activated, only the Rescue Timezone will be used.\n3. <b>Please do not rely on this module to achieve winning streaks. Language learning requires long-term regular persistence.</b></string>
+    <string name="rescue_status">Current applied timezone: </string>
+    <string name="rescue_dialog">Rescue mode now! Timezone: %s</string>
+    <string name="rescue_desc">1. When the "Default Timezone" is cleared, it will revert to the system time zone.\n2. When rescue mode is activated, only the Rescue Timezone will be used.</string>
 </resources>

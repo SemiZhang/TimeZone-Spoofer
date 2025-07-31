@@ -35,14 +35,23 @@ class MainActivity : AppCompatActivity() {
         val defaultTzButton = findViewById<Button>(R.id.default_tz_button)
         defaultTzEdit.setText(pref.getString("default_timezone"))
         defaultTzButton.setOnClickListener {
-            if (availableTimezoneList.contains(defaultTzEdit.text.toString())) {
-                pref.edit().putString("default_timezone", defaultTzEdit.text.toString()).apply()
+            if (defaultTzEdit.text.isNullOrBlank()) {
+                pref.edit().putString("default_timezone", "")
                 if (pref.getBoolean("is_save", false) == false) {
-                    renewTimezone(defaultTzEdit.text.toString(), pref, psStatusText)
+                    renewTimezone(TimeZone.getDefault().id, pref, psStatusText)
                 }
-                Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
+            }
+            else {
+                if (availableTimezoneList.contains(defaultTzEdit.text.toString())) {
+                    pref.edit().putString("default_timezone", defaultTzEdit.text.toString()).apply()
+                    if (pref.getBoolean("is_save", false) == false) {
+                        renewTimezone(defaultTzEdit.text.toString(), pref, psStatusText)
+                    }
+                    Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -51,14 +60,23 @@ class MainActivity : AppCompatActivity() {
         val rescueTzButton = findViewById<Button>(R.id.rescue_tz_button)
         rescueTzEdit.setText(pref.getString("rescue_timezone"))
         rescueTzButton.setOnClickListener {
-            if (availableTimezoneList.contains(rescueTzEdit.text.toString())) {
-                pref.edit().putString("rescue_timezone", rescueTzEdit.text.toString()).apply()
+            if (rescueTzEdit.text.isNullOrBlank()) {
+                pref.edit().putString("rescue_timezone", "")
                 if (pref.getBoolean("is_save", false) == true) {
-                    renewTimezone(rescueTzEdit.text.toString(), pref, psStatusText)
+                    renewTimezone(TimeZone.getDefault().id, pref, psStatusText)
                 }
-                Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
+            }
+            else {
+                if (availableTimezoneList.contains(rescueTzEdit.text.toString())) {
+                    pref.edit().putString("rescue_timezone", rescueTzEdit.text.toString()).apply()
+                    if (pref.getBoolean("is_save", false) == true) {
+                        renewTimezone(rescueTzEdit.text.toString(), pref, psStatusText)
+                    }
+                    Toast.makeText(this, getText(R.string.timezone_saved), Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    Toast.makeText(this, getText(R.string.rescue_error), Toast.LENGTH_SHORT).show()
+                }
             }
         }
 

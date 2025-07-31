@@ -5,16 +5,24 @@ plugins {
 }
 
 android {
-    namespace = "com.jakting.duolingo"
+    namespace = "com.semiz.timezonespoofer"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.jakting.duolingo"
+        applicationId = "com.semiz.timezonespoofer"
         minSdk = 29
         targetSdk = 35
-        versionCode = 202501310
-        versionName = "2.0"
+        versionCode = 20250730
+        versionName = "1.01"
     }
+
+    /*
+    android.applicationVariants.all{ variant ->
+        variant.outputs.all{
+            outputFileName = "TimeZoneSpoofer_v${variant.versionName}_${variant.name}.apk"
+        }
+    }
+    */
 
     buildTypes {
         release {

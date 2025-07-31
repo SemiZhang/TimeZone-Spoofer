@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>rescue_clear
-    <string name="app_name">Duolingo Regret</string>
-    <string name="xposed_desc">Change Duolingo\'s time zone to any arbitrary time zone, makes it easier to go back and finish forgotten streaks. For specific regions, modifying the default time zone can prevent accounts from being classified as accounts from certain areas.</string>
+    <string name="app_name">TimeZone Spoofer</string>
+    <string name="xposed_desc">Change time zone of selected apps</string>
 
     <string name="ok">OK</string>
     <string name="setting_success">Done, please manually restart Duolingo</string>

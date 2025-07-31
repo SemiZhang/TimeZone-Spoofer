@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">多邻国后悔药</string>
-    <string name="xposed_desc">将多邻国的时区修改为任意时区，便于回到过去做完忘了做的连胜。对特定地区来说，可以通过修改默认时区防止账户被判定为某些地区账户。</string>
+    <string name="app_name">TimeZone Spoofer</string>
+    <string name="xposed_desc">修改指定应用的时区</string>
 
     <string name="ok">确定</string>
     <string name="setting_success">设置成功，请手动重启多邻国</string>

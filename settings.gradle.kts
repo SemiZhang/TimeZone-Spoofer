@@ -22,9 +22,9 @@ dependencyResolutionManagement {
     };
 }
 
-rootProject.name = "DuolingoRegret";
+rootProject.name = "TimeZoneSpoofer";
 include(":app");
 
-rootProject.name = "DuolingoRegret"
+rootProject.name = "TimeZoneSpoofer"
 include(":app")
  

@@ -1,4 +1,4 @@
-package com.jakting.duolingo
+package com.semiz.timezonespoofer
 
 import android.content.Context
 import android.os.Bundle

@@ -9,7 +9,7 @@ import com.highcapable.yukihookapi.hook.type.java.UnitType
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
 import java.util.TimeZone
 
-private const val PACKAGE_NAME_HOOKED = "com.duolingo"
+private const val PACKAGE_NAME_HOOKED = "com.eg.android.AlipayGphone"
 private const val TAG = "TIGERBEANST_DUOLINGO"
 
 @InjectYukiHookWithXposed
@@ -46,7 +46,7 @@ object MainHook : IYukiHookXposedInit {
             }
 
             if (isSaveMode == true) {
-                "com.duolingo.splash.LaunchActivity".toClass().method {
+                "com.alipay.mobile.quinox.LauncherActivity".toClass().method {
                     name = "onCreate"
                     param(BundleClass)
                     returnType = UnitType

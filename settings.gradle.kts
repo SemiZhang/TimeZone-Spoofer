@@ -12,18 +12,15 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS);
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google();
-        mavenCentral();
+        google()
+        mavenCentral()
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://api.xposed.info/") }
         maven { url = uri("https://s01.oss.sonatype.org/content/repositories/releases/") }
-    };
+    }
 }
-
-rootProject.name = "TimeZoneSpoofer";
-include(":app");
 
 rootProject.name = "TimeZoneSpoofer"
 include(":app")
